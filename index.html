@@ -31,7 +31,26 @@ BODY {
        
 
     </main>
-!!script here
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'fr'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00D24000000KvTZ',
+				'STRASA',
+				'https://siway.my.site.com/ESWSTRASA1734505631754',
+				{
+					scrt2URL: 'https://siway.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://siway.my.site.com/ESWSTRASA1734505631754/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
   </body>
 
 </html>
